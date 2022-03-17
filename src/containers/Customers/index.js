@@ -104,6 +104,7 @@ const Customers = () => {
                                 }
                             }}
                         />
+
                         {validationError && (
                             <div className="validation-info">
                                 Please enter only alphanumeric, underscore(_),
@@ -111,9 +112,13 @@ const Customers = () => {
                             </div>
                         )}
                     </div>
+
                     {customers.map((customer, index) => (
                         <Customer key={index} data={customer} />
                     ))}
+
+                    {customers.length == 0 ? <NoRecord /> : null}
+
                     {filteredCustomers.length >= 6 ? (
                         <div className="pagination">
                             <ul>{renderPageNumbers}</ul>
