@@ -16,7 +16,6 @@ const getCustomers = (dispatch) => {
     return async () => {
         try {
             const response = await CustomerService.get("/customers");
-            console.log("Customers: ", response.data);
             dispatch({
                 type: "get_customers",
                 payload: response.data,
@@ -31,12 +30,9 @@ const getCustomers = (dispatch) => {
 const getCustomer = (dispatch) => {
     return async (customerId) => {
         try {
-            console.log("customerID: ", customerId);
-
             const response = await CustomerService.get(
                 `/customers/${customerId}`
             );
-            console.log("Customer: ", response.data);
             dispatch({
                 type: "get_customer",
                 payload: response.data,

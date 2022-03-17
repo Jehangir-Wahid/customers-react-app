@@ -21,19 +21,34 @@ const Customer = () => {
                         </figure>
                         <aside>
                             <h2>{state.customer.name}</h2>
-                            <p>
-                                Username: {state.customer.username}
-                                <br />
-                                E-mail: {state.customer.email}
-                                <br />
-                                Phone number: {state.customer.contact}
-                                <br />
-                                Age: {state.customer.age}
-                                <br />
-                                Gender: {state.customer.gender}
-                                <br />
-                                Address: {state.customer.address}
-                            </p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Username:</td>
+                                        <td>{state.customer.username}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>E-mail:</td>
+                                        <td>{state.customer.email}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cell #:</td>
+                                        <td>{state.customer.contact}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Age:</td>
+                                        <td>{state.customer.age}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gender:</td>
+                                        <td>{state.customer.gender}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address:</td>
+                                        <td>{state.customer.address}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                             <NavLink to="/">Go Back</NavLink>
                         </aside>
                     </div>
